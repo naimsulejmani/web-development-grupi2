@@ -27,13 +27,43 @@
         <td th:text="${statsCount}"></td>
     </tr>
     </tbody>
-    <tfoot>
+    <tfoot th:with="total=${homeCount + aboutCount + galleryCount + statsCount}">
     <tr>
         <th scope="row">Total</th>
-        <td th:text="${homeCount + aboutCount + galleryCount + statsCount}"></td>
+        <td th:text="${total}"></td>
     </tr>
     </tfoot>
 </table>
 
+
+<a th:href="@{/broken(id=${homeCount})}">Broken Link</a>
+
+<div th:with="frag=~{::p}">
+    <th:block th:insert="${frag}"></th:block>
+</div>
+
+<div>
+    <th:block th:insert="~{gallery:: #img}">
+
+    </th:block>
+</div>
 <th:block th:insert="~{/shared/_footer.html}"></th:block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
