@@ -1,0 +1,18 @@
+<th:block th:insert="~{/shared/_header.html}"></th:block>
+
+<p th:text="${message}"></p>
+<p th:text="${currentYear}"></p>
+
+<p th:text="${companyInfo.name.toUpperCase()}"></p>
+<p th:text="${companyInfo.address}"></p>
+<p th:text="${companyInfo.phone}"></p>
+
+
+<div th:object="${companyInfo}">
+    <p th:text="*{name.toUpperCase()}"></p>
+    <p th:text="*{address}"></p>
+    <p th:text="*{phone}"></p>
+</div>
+
+<th:block th:insert="~{/shared/_footer.html}"></th:block>
+

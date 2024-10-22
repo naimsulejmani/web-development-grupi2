@@ -1,0 +1,39 @@
+<th:block th:insert="~{/shared/_header.html}"></th:block>
+
+<p th:text="${message}"></p>
+<hr/>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Page Name</th>
+        <th scope="col">Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">Home</th>
+        <td th:text="${homeCount}"></td>
+    </tr>
+    <tr>
+        <th scope="row">About</th>
+        <td th:text="${aboutCount}"></td>
+    </tr>
+    <tr>
+        <th scope="row">Gallery</th>
+        <td th:text="${galleryCount}"></td>
+    </tr>
+    <tr>
+        <th scope="row">Stats</th>
+        <td th:text="${statsCount}"></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th scope="row">Total</th>
+        <td th:text="${homeCount + aboutCount + galleryCount + statsCount}"></td>
+    </tr>
+    </tfoot>
+</table>
+
+<th:block th:insert="~{/shared/_footer.html}"></th:block>
+

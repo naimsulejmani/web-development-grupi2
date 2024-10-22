@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title</title>
+    <title th:text="${pageTitle}"></title>
     <th:block th:insert="~{/shared/_styles.html}"></th:block>
 </head>
 <body>
 <th:block th:insert="~{/shared/_navigation.html}"></th:block>
+<div class="container mt-5">
